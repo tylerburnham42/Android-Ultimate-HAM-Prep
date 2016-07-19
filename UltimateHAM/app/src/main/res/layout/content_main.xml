@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    android:background="@color/material_blue_grey_950">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ultimate HAM"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.22"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:textSize="50sp"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="323dp"
+        android:layout_height="80dp"
+        android:text="Im Ready"
+        android:id="@+id/imReadyButton"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30sp"
+        android:textColor="@color/abc_primary_text_disable_only_material_light"
+        android:background="@android:color/holo_orange_dark" />
+</LinearLayout>
