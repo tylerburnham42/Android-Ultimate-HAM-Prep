@@ -9,11 +9,14 @@ import android.view.Menu;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.List;
+import java.util.Random;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Question currentQuestion;
@@ -32,6 +35,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressBar progressBar;
     private CustomCountDownTimer countDownTimer;
     private Boolean ranOutOfTime = false;
+
+    private ToggleButton twoMin;
+    private ToggleButton oneMin;
+    private ToggleButton thritySec;
+    private ToggleButton tenSec;
+    private int timerTime = 120000;
+    private ToggleButton orderedOrRandom;
+    private boolean ordered = true;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -62,6 +74,69 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         });
 
+        twoMin =(ToggleButton)findViewById(R.id.twoMinButton);
+        oneMin =(ToggleButton)findViewById(R.id.oneMinButton);
+        thritySec =(ToggleButton)findViewById(R.id.thritySecButton);
+        tenSec =(ToggleButton)findViewById(R.id.tenSecButton);
+        twoMin.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                twoMin.setChecked(true);
+                oneMin.setChecked(false);
+                thritySec.setChecked(false);
+                tenSec.setChecked(false);
+                timerTime = 120000;
+                return;
+            }
+        });
+        oneMin.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                twoMin.setChecked(false);
+                oneMin.setChecked(true);
+                thritySec.setChecked(false);
+                tenSec.setChecked(false);
+                timerTime = 60000;
+                return;
+            }
+        });
+        thritySec.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                twoMin.setChecked(false);
+                oneMin.setChecked(false);
+                thritySec.setChecked(true);
+                tenSec.setChecked(false);
+                timerTime = 30000;
+                return;
+            }
+        });
+        tenSec.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                twoMin.setChecked(false);
+                oneMin.setChecked(false);
+                thritySec.setChecked(false);
+                tenSec.setChecked(true);
+                timerTime = 10000;
+                return;
+            }
+        });
+
+        orderedOrRandom =(ToggleButton)findViewById(R.id.orderedOrRandomButton);
+        orderedOrRandom.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                ordered = !orderedOrRandom.isChecked();
+                return;
+            }
+        });
+
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -77,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setMax(100);
         progressBar.setIndeterminate(false);
-        countDownTimer = new CustomCountDownTimer(10000,100);
+        countDownTimer = new CustomCountDownTimer(timerTime,100);
         countDownTimer.start();
         ranOutOfTime = false;
 
@@ -101,6 +176,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void loadQuestion()
     {
         problem.setText(currentQuestion.getProblem());
+
         answerA.setText(currentQuestion.getAnswer(Question.AnswerEnum.A));
         answerB.setText(currentQuestion.getAnswer(Question.AnswerEnum.B));
         answerC.setText(currentQuestion.getAnswer(Question.AnswerEnum.C));
@@ -146,12 +222,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ranOutOfTime = false;
 
             //Update question
-            if (currentID > questionList.size()) {
-                currentID = 0;
-            } else {
-                currentID++;
+            if (ordered) {
+                if (currentID > questionList.size()) {
+                    currentID = 0;
+                } else {
+                    currentID++;
+                }
             }
+            else
+            {
+                Random rand = new Random();
+                currentID = rand.nextInt(questionList.size());
 
+            }
             //load new question
             currentQuestion = questionList.get(currentID);
             loadQuestion();
