@@ -12,11 +12,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisities
 This app was created and deployed using the following software:  
-Android Studio 2.1.2
-Nexus 5X
+ - Android Studio 2.1.2  
+ - Nexus 5X  
 
 ### Installing
-Clone the Git Repo to your local machiene. Open the project in android studio. Either install a simulator or plugin a supported phone. Click Run.
+Clone the Git Repo to your local machiene. Open the project in Android Studio. Either install a simulator or plugin on a supported phone. Click Run.
 
 ## Contributing
 
