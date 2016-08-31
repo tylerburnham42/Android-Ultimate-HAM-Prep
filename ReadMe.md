@@ -3,11 +3,9 @@ I created this application to try my hand at creating Android apps as I was stud
 The purpose of this app was to create a timmed version of a HAM study prep app. This app has been deployed on the app store, it can be downloaded and tested here:  
 https://play.google.com/store/apps/details?id=com.tylerburnham42.ultimateHAMPrep&hl=en 
 
-<img src="Screenshots/Screenshot_20160718-203756.png" alt="" style="width: 30px;"/>
-<img src="Screenshots/Screenshot_20160718-204158.png" alt="" style="width: 30px;"/>
-<img src="Screenshots/Screenshot_20160728-131752.png" alt="" style="width: 30px;"/>
-
-
+<img src="Screenshots/Screenshot_20160728-131752.png" alt="" width="200"/>
+<img src="Screenshots/Screenshot_20160718-203756.png" alt="" width="200"/>
+<img src="Screenshots/Screenshot_20160718-204158.png" alt="" width="200"/>
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
