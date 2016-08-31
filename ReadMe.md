@@ -3,6 +3,10 @@ I created this application to try my hand at creating Android apps as I was stud
 The purpose of this app was to create a timmed version of a HAM study prep app. This app has been deployed on the app store, it can be downloaded and tested here:  
 https://play.google.com/store/apps/details?id=com.tylerburnham42.ultimateHAMPrep&hl=en 
 
+<img src="Screenshots/Screenshot_20160718-203756.png" alt="" style="width: 30px;"/>
+<img src="Screenshots/Screenshot_20160718-204158.png" alt="" style="width: 30px;"/>
+<img src="Screenshots/Screenshot_20160728-131752.png" alt="" style="width: 30px;"/>
+
 
 
 ## Getting Started
@@ -22,20 +26,15 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Versioning
 
-For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+For the versions available, see the [tags on this repository](https://github.com/tylerburnham42/Android-Ultimate-HAM-Prep/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Tyler Burnham** - *Initial work* - [tylerburnham42](https://github.com/tylerburnham42)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/tylerburnham42/Android-Ultimate-HAM-Prep/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
