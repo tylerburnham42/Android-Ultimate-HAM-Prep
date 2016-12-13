@@ -7,10 +7,10 @@ public class Question {
     public enum AnswerEnum {A,B,C,D}
     private int id;
     private String problem;
-    private String answerA;
-    private String answerB;
-    private String answerC;
-    private String answerD;
+    public String answerA;
+    public String answerB;
+    public String answerC;
+    public String answerD;
     private AnswerEnum correct;
 
 
