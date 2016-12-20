@@ -1,77 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:weightSum="1"
-    android:background="@color/material_blue_grey_950">
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:background="@color/material_blue_grey_950">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Ultimate HAM"
-        android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/abc_primary_text_disable_only_material_dark"
-        android:textSize="50sp"
-        android:textAlignment="center" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Ultimate HAM"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:textSize="50sp"
+            android:textAlignment="center" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight=".1">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".1">
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/twoMinButton"
+                android:textOff="2M"
+                android:textOn="2M"
+                android:layout_weight=".2" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/oneMinButton"
+                android:textOff="1M"
+                android:textOn="1M"
+                android:layout_weight=".2" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/thirtySecButton"
+                android:textOff="30S"
+                android:textOn="30S"
+                android:layout_weight=".2" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/tenSecButton"
+                android:textOff="10S"
+                android:textOn="10S"
+                android:layout_weight=".2" />
+        </LinearLayout>
 
         <ToggleButton
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/twoMinButton"
-            android:textOff="2M"
-            android:textOn="2M"
-            android:layout_weight=".2" />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderedOrRandomButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".1"
+            android:textOff="Ordered"
+            android:textOn="Random" />
 
-        <ToggleButton
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/oneMinButton"
-            android:textOff="1M"
-            android:textOn="1M"
-            android:layout_weight=".2" />
-
-        <ToggleButton
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/thritySecButton"
-            android:textOff="30S"
-            android:textOn="30S"
-            android:layout_weight=".2" />
-
-        <ToggleButton
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/tenSecButton"
-            android:textOff="10S"
-            android:textOn="10S"
-            android:layout_weight=".2" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/imReadyButton"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            android:textColor="@color/abc_primary_text_disable_only_material_light"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_weight=".1" />
     </LinearLayout>
-
-    <ToggleButton
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/orderedOrRandomButton"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight=".1"
-        android:textOff="Ordered"
-        android:textOn="Random" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:id="@+id/imReadyButton"
-        android:layout_gravity="center_horizontal"
-        android:textSize="30sp"
-        android:textColor="@color/abc_primary_text_disable_only_material_light"
-        android:background="@android:color/holo_orange_dark"
-        android:layout_weight=".1" />
-</LinearLayout>
+</layout>
